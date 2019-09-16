@@ -25,7 +25,6 @@ This is a simply implementation of Merkle Hellman encryption method.
   prepareStringToSend(),<br/>
   sendStringData(DatagramSocket socket, String destinationHost, int sendPort),<br/>
   getAllCFromClient(DatagramSocket socket),<br/>
-  displayAllC(),<br/>
   calculateCPrimNumbers(),<br/>
   cPrimeToBits(),<br/>
   bitsToByteTable(),<br/>
