@@ -18,7 +18,7 @@ This is a simply implementation of Merkle Hellman encryption method.
   merkleHellman.calculateCNumbersAndSendToSerwer(DatagramSocket socket, String host, int sendPort).<br/>
 
 <b>To receive and decrypt file you must:</b><br/>
-1.Import MerkleHellmanFileReceiver.class file to your project.<br/>
+1. Import MerkleHellmanFileReceiver.class file to your project.<br/>
 2. Create new instance of this class:<br/>
   <i>MerkleHellmanFileReceiverr mhfs= new MerkleHellmanFileReceiver(DatagramSocket socket);</i><br/>
 3. Call methods:<br/>
