@@ -15,7 +15,7 @@ This is a simply implementation of Merkle Hellman encryption method.
   sendLengthOfFileToSerwer(DatagramSocket socket, String host, int sendPort),<br/>
   getStringDataFormSerwer(int receivePort),<br/>
   byteTableToBits(),<br/>
-  merkleHellman.calculateCNumbersAndSendToSerwer(DatagramSocket socket, String host, int sendPort).<br/>
+  calculateCNumbersAndSendToSerwer(DatagramSocket socket, String host, int sendPort).<br/>
 
 <b>To receive and decrypt file you must:</b><br/>
 1. Import MerkleHellmanFileReceiver.class file to your project.<br/>
