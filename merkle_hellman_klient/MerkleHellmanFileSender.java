@@ -69,8 +69,8 @@ public class MerkleHellmanFileSender {
             System.out.print(u+",");
         }
         System.out.println("\nPlik w bitach: "+fileInBits);
-        System.out.println("Iloœæ bajtów="+ fileInBytesLength);
-        System.out.println("Iloœæ bitów="+fileInBits.length());
+        System.out.println("Ilosc bajtow="+ fileInBytesLength);
+        System.out.println("Ilosc bitow="+fileInBits.length());
         System.out.println("==================");
 
     }
@@ -93,7 +93,7 @@ public class MerkleHellmanFileSender {
             {
                 listOfC.add(C);
 
-                //Wys³anie szyfrogramu
+                //Wyslanie szyfrogramu
                 ByteArrayOutputStream bout1 = new ByteArrayOutputStream();
                 PrintStream pout1 = new PrintStream( bout1 );
                 pout1.print(C);
@@ -123,7 +123,7 @@ public class MerkleHellmanFileSender {
         }
         else
         {
-            System.out.println("Przes³ano nieprawid³ow¹ iloœæ danych!");
+            System.out.println("Przeslano nieprawidlowa ilosc danych!");
         }
     }
 
@@ -136,7 +136,7 @@ public class MerkleHellmanFileSender {
         byte[] barray = bout.toByteArray();
         DatagramPacket dp1= new DatagramPacket(barray, barray.length, host, sendPort);
         socket.send(dp1);
-        System.out.println("Wys³ano iloœæ bajtów w pliku: "+ fileInBytesLength);
+        System.out.println("Wyslano ilosc bajtow w pliku: "+ fileInBytesLength);
     }
 
 

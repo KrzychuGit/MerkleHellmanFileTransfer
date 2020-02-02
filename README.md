@@ -12,7 +12,7 @@ This is a simply implementation of Merkle Hellman encryption method.
   <i>MerkleHellmanFileSender mhfs= new MerkleHellmanFileSender();</i><br/>
 3. Call methods:<br/>
   prepareFileToSend(String filePath),<br/>
-  sendLengthOfFileToSerwer(DatagramSocket socket, String host, int sendPort),<br/>
+  sendLengthOfFileToSerwer(DatagramSocket socket, InetAddress host, int sendPort),<br/>
   getStringDataFormSerwer(int receivePort),<br/>
   byteTableToBits(),<br/>
   calculateCNumbersAndSendToSerwer(DatagramSocket socket, String host, int sendPort).<br/>
@@ -20,7 +20,10 @@ This is a simply implementation of Merkle Hellman encryption method.
 <b>To receive and decrypt file you must:</b><br/>
 1. Import MerkleHellmanFileReceiver.class file to your project.<br/>
 2. Create new instance of this class:<br/>
-  <i>MerkleHellmanFileReceiverr mhfs= new MerkleHellmanFileReceiver(DatagramSocket socket);</i><br/>
+  <i>
+DatagramSocket socket= new DatagramSocket(int receivePort);<br/>
+MerkleHellmanFileReceiverr mhfs= new MerkleHellmanFileReceiver(socket);<br/>
+</i>
 3. Call methods:<br/>
   prepareStringToSend(),<br/>
   sendStringData(DatagramSocket socket, String destinationHost, int sendPort),<br/>

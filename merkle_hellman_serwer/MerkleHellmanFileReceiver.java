@@ -138,7 +138,7 @@ public class MerkleHellmanFileReceiver
                 "1621 1627 1637 1657 1663 1667 1669 1693 1697 1699 1709 1721 1723 1733 1741 1747 1753 1759 1777 1783 " +
                 "1787 1789 1801 1811 1823 1831 1847 1861 1867 1871 1873 1877 1879 1889 1901 1907 1913 1931 1933 1949 " +
                 "1951 1973 1979 1987 1993 1997 1999 2003 ";
-        //Zmiana sk³adni Stringu z liczbami pierwszymi
+        //Zmiana skladni Stringu z liczbami pierwszymi
         liczbyPierwsze= liczbyPierwsze.replace(' ','#' );
 
         privateKey= new Long[8];
@@ -174,7 +174,7 @@ public class MerkleHellmanFileReceiver
             byte[] barray = bout.toByteArray();
             DatagramPacket dp1= new DatagramPacket(barray, barray.length, host, port);
             sock.send(dp1);
-            System.out.println("Wys³ano do klienta: "+ toSend);
+            System.out.println("Wyslano do klienta: "+ toSend);
         }catch(IOException ex){
             System.out.print("IOException: "+ex.getMessage());
         }
@@ -190,7 +190,7 @@ public class MerkleHellmanFileReceiver
         lengthOfFileInByte = Integer.valueOf(new String(data1, 0, data1.length).trim());
 
 
-        System.out.println("Odebrano dane z serwera: D³ugoœæ pliku: "+ lengthOfFileInByte+"bajtów.");
+        System.out.println("Odebrano dane z serwera: Dlugosc pliku: "+ lengthOfFileInByte+"bajtow.");
 
     }
 
@@ -221,7 +221,7 @@ public class MerkleHellmanFileReceiver
         }
         else
         {
-            System.out.println("B£¥D! Odebrano niekompletne dane");
+            System.out.println("BLAD! Odebrano niekompletne dane");
         }
     }
 
@@ -248,7 +248,7 @@ public class MerkleHellmanFileReceiver
             }
             a++;
         }
-        System.out.println("\nOdwrotnoœæ w="+wPrim);
+        System.out.println("\nOdwrotnosc w="+wPrim);
 
         for(int op=0; op<listOfC.size();op++)
         {
@@ -313,12 +313,12 @@ public class MerkleHellmanFileReceiver
 
         }
         if(errorNumber>0)
-            System.out.println("\nNIE ZNALEZIONO UK£ADu BITÓW DLA: "+errorNumber+"liczb!!");
+            System.out.println("\nNIE ZNALEZIONO UKLADU BITOW DLA: "+errorNumber+"liczb!!");
 
         fileInBinary= bitsToFile.toString();
 
         System.out.println("\nPlik w bitach: "+fileInBinary);
-        System.out.println("Iloœæ bitów: "+fileInBinary.length());
+        System.out.println("Ilosc bitow: "+fileInBinary.length());
     }
 
     public void bitsToByteTable()
@@ -351,7 +351,7 @@ public class MerkleHellmanFileReceiver
             FileOutputStream fos = new FileOutputStream(file);
             fos.write(fileInBytes);
             fos.close();
-            System.out.println("\nPomyœlnie utworzono plik. (Rozmiar: "+fileInBytes.length+" bajtów)");
+            System.out.println("\nPomyslnie utworzono plik. (Rozmiar: "+fileInBytes.length+" bajtow)");
         }catch(IOException e){
             System.out.println("IOException: "+e.getMessage());
         }
