@@ -21,8 +21,8 @@ This is a simply implementation of Merkle Hellman encryption method.
 1. Import MerkleHellmanFileReceiver.class file to your project.<br/>
 2. Create new instance of this class:<br/>
   <i>
-DatagramSocket socket= new DatagramSocket(int receivePort);<br/>
-MerkleHellmanFileReceiverr mhfs= new MerkleHellmanFileReceiver(socket);<br/>
+  DatagramSocket socket= new DatagramSocket(int receivePort);<br/>
+  MerkleHellmanFileReceiverr mhfs= new MerkleHellmanFileReceiver(socket);<br/>
 </i>
 3. Call methods:<br/>
   prepareStringToSend(),<br/>
